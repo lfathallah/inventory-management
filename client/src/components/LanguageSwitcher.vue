@@ -91,56 +91,65 @@ const selectLanguage = (locale) => {
 <style scoped>
 .language-switcher {
   position: relative;
+  flex-shrink: 0;
 }
 
 .language-button {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.875rem;
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  gap: 0.375rem;
+  padding: 0.375rem 0.5rem;
+  background: transparent;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   font-family: inherit;
-  font-size: 0.875rem;
-  color: #334155;
+  font-size: 0.75rem;
+  color: #64748b;
+  white-space: nowrap;
 }
 
 .language-button:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
 }
 
 .globe-icon {
-  color: #64748b;
+  color: #475569;
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .language-label {
   font-weight: 500;
+  font-size: 0.688rem;
 }
 
 .chevron {
-  color: #64748b;
+  color: #475569;
   transition: transform 0.2s ease;
   flex-shrink: 0;
+  width: 12px;
+  height: 12px;
 }
 
 .chevron-open {
   transform: rotate(180deg);
 }
 
+/* Dropdown opens UPWARD */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  min-width: 160px;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 140px;
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   overflow: hidden;
 }
